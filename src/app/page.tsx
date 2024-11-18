@@ -73,7 +73,8 @@ export default function Home() {
           />
           <button
             onClick={onClick}
-            className="px-4 py-2 bg-[#347866] text-white rounded-md hover:bg-[#1E4339]"
+            disabled={!searchTerm}
+            className="px-4 py-2 bg-[#347866] text-white rounded-md hover:bg-[#1E4339] disabled:bg-gray-400"
           >
             Reset Search
           </button>
