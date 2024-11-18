@@ -106,7 +106,11 @@ export default function Home() {
                 <Specialties specialties={advocate.specialties} />
               </td>
               <td className="px-4 py-2">{advocate.yearsOfExperience}</td>
-              <td className="px-4 py-2">{advocate.phoneNumber}</td>
+              <td className="px-4 py-2">
+                {advocate.phoneNumber
+                  .toString()
+                  .replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")}
+              </td>
             </tr>
           ))}
         </tbody>
